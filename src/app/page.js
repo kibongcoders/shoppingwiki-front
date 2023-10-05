@@ -1,95 +1,129 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+import {Col, Container, Form, Image, Row} from "react-bootstrap";
+import Header from "@/components/header";
+
+const container = {
+    backgroundColor: "#2f3542",
+}
+
+const row = {
+    borderBottom : "0.5px white solid",
+    paddingTop   : "10px",
+    paddingBottom: "10px"
+}
 
 export default function Home() {
-  return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+    return (
+        <>
+            <Header/>
+            <Container style={container}>
+                <Row style={{paddingTop: "10px"}}>
+                    <Col>
+                        <h1>아이폰</h1>
+                    </Col>
+                </Row>
+                <Row style={row}>
+                    <Col className={"text-end"}>
+                        <p>최근 수정 시각: 2023-10-04 00:30:04</p>
+                    </Col>
+                </Row>
+                <Row style={row}>
+                    <Col className={"text-start"}>
+                        <p>아이폰 좋아요</p>
+                        <p>아이폰 좋아요</p>
+                        <p>아이폰 좋아요</p>
+                        <p>아이폰 좋아요</p>
+                        <p>아이폰 좋아요</p>
+                        <p>아이폰 좋아요</p>
+                    </Col>
+                </Row>
+                <Row style={row}>
+                    <Col md={10} className={"text-end"}>
+                        <p>정확도순 날짜순 높은 가격순 낮은 가격순</p>
+                    </Col>
+                    <Col md={2} className={"text-end"}>
+                        <Form.Select>
+                            <option value={10}>
+                                10개씩 보기
+                            </option>
+                            <option value={20}>
+                                20개씩 보기
+                            </option>
+                            <option value={50}>
+                                50씩 보기
+                            </option>
+                        </Form.Select>
+                    </Col>
+                </Row>
+                <Row style={row}>
+                    <Col md={2}>
+                        <Image thumbnail={true}
+                               src="https://shopping-phinf.pstatic.net/main_3456175/34561756621.20220929142551.jpg"/>
+                    </Col>
+                    <Col md={8}>
+                        <Row>
+                            <p>
+                                <b>아이폰</b> 14 프로 256GB [자급제]
+                            </p>
+                        </Row>
+                        <Row>
+                            <p>
+                                1461990
+                            </p>
+                        </Row>
+                        <Row>
+                            <p>
+                                디지털/가전 {">"} 휴대폰 {">"} 자급제폰
+                            </p>
+                        </Row>
+                    </Col>
+                </Row>
+                <Row style={row}>
+                    <Col md={2}>
+                        <Image thumbnail={true}
+                               src="https://shopping-phinf.pstatic.net/main_3456175/34561756621.20220929142551.jpg"/>
+                    </Col>
+                    <Col md={8}>
+                        <Row>
+                            <p>
+                                <b>아이폰</b> 14 프로 256GB [자급제]
+                            </p>
+                        </Row>
+                        <Row>
+                            <p>
+                                1461990
+                            </p>
+                        </Row>
+                        <Row>
+                            <p>
+                                디지털/가전 {">"} 휴대폰 {">"} 자급제폰
+                            </p>
+                        </Row>
+                    </Col>
+                </Row>
+                <Row style={row}>
+                    <Col md={2}>
+                        <Image thumbnail={true}
+                               src="https://shopping-phinf.pstatic.net/main_3456175/34561756621.20220929142551.jpg"/>
+                    </Col>
+                    <Col md={8}>
+                        <Row>
+                            <p>
+                                <b>아이폰</b> 14 프로 256GB [자급제]
+                            </p>
+                        </Row>
+                        <Row>
+                            <p>
+                                1461990
+                            </p>
+                        </Row>
+                        <Row>
+                            <p>
+                                디지털/가전 {">"} 휴대폰 {">"} 자급제폰
+                            </p>
+                        </Row>
+                    </Col>
+                </Row>
+            </Container>
+        </>
+    )
 }
